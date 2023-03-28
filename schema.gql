@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserDTO {
+  id: String!
+  fullName: String!
+  email: String!
+  address: String!
+  acl: String!
+  lat: Float!
+  lon: Float!
+}
+
+type Query {
+  getAllUsers: [UserDTO!]!
+}
+
+type Mutation {
+  addUser(user: UserInputDTO!): UserDTO!
+  updateUser(user: UserInputDTO!): UserDTO!
+  deleteUser(id: String!): UserDTO!
+}
+
+input UserInputDTO {
+  id: String!
+  fullName: String!
+  email: String!
+  address: String!
+  acl: String!
+  lat: Float!
+  lon: Float!
+}
